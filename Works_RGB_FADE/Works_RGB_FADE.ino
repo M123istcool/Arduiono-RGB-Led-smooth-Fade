@@ -1,8 +1,9 @@
-#define RED_PIN 9      // where the red pin is connected to
-#define GREEN_PIN 10   // where the green pin is connected to
-#define BLUE_PIN 11    // where the blue pin is connected to
+//ANALOG
+#define RED_PIN 9      // red LED
+#define GREEN_PIN 10   // green LED
+#define BLUE_PIN 11    // blue LED
 
-#define DELAY 20       // 20ms internal delay; increase for slower fades
+#define DELAY 20       // 20ms internal delay, increase for slower fades
 
 
 
@@ -17,10 +18,6 @@ void setup() {
 }
 
 void loop() {
-
-  
-  
-  
   // fade from green to red
   for(int i=0; i<255; i++) {
     analogWrite(RED_PIN, i);
@@ -44,4 +41,5 @@ void loop() {
     analogWrite(BLUE_PIN, 255-i);
     delay(DELAY);
   }
+  
 }
